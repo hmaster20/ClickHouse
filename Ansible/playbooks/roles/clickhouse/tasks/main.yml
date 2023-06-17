@@ -1,0 +1,12 @@
+---
+  # - name: ClickHouse | Init vars
+  #   import_tasks: vars.yml
+  #   tags: [clickhouse_vars, vars]
+
+  - name: ClickHouse | Install
+    import_tasks: install.yml
+    tags: [clickhouse_install, install]
+
+  - name: ClickHouse | Config
+    import_tasks: config.yml
+    tags: [clickhouse_config, config]
