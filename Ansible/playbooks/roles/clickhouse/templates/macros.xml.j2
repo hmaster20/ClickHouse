@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- {{ ansible_managed }} -->
+<yandex>
+    <macros>
+        <shard>{{ clickhouse_shard }}</shard>
+        <replica>{{ "0"+((groups['clickhouse'].index(inventory_hostname))+1 |int)|string }}</replica>
+    </macros>
+</yandex>
