@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- {{ ansible_managed }} -->
+<yandex>
+    <zookeeper>
+{% for zookeeper_node in groups['zookeeper'] %}
+    <node>
+        <host>{{ hostvars[zookeeper_node]['ansible_host'] }}</host>
+        <port>{{ clickhouse_zookeeper_port }}</port>
+    </node>
+{% endfor %}
+    </zookeeper>
+</yandex>
