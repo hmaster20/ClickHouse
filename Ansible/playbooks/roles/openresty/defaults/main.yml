@@ -1,0 +1,10 @@
+---
+
+clickhouse_http_port: 8123
+clickhouse_url: "clickhouse"
+
+openresty_log_path: /var/log/openresty
+openresty_config_path: /etc/openresty
+openresty_cache_path: /var/cache/openresty
+
+openresty_default_protocol: http # For production set to https

@@ -1,0 +1,16 @@
+---
+- name: openresty restart
+  systemd:
+    name: openresty.service
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+
+- name: openresty reload
+  systemd:
+    name: openresty.service
+    state: reloaded
+
+- name: openresty validate configuration
+  command: openresty -t
+  changed_when: False
